@@ -7,4 +7,4 @@
 
 
 
-For reference on `quarto`, see the official documentation https://quarto.org or this article https://www.ds-econ.com/quarto/ for some additional information.
+For reference on `quarto`, see the official documentation https://quarto.org or this article https://www.ds-econ.com/quarto/ for additional information. Finn also writes [The Repo newsletter](https://dsecon.substack.com), where he curates remarkable open-source programmers and projects in data science.
