@@ -1,0 +1,88 @@
+---
+title: The Real World Data Science content brief template
+description: |
+  Explain your article idea, key takeaways, etc., and share with our editorial board!
+categories:
+  - Resources
+  - for
+  - Contributors
+author: Author1, Author2
+date: last-modified
+date-format: long
+toc: true
+format:
+  html:
+    theme: [lux, rwds.scss]
+    css: rwds.css
+    toc: true
+    grid:
+      sidebar-width: 0px
+      body-width: 1000px
+      margin-width: 250px
+    code-annotations: below
+bibliography: references.bib
+csl: chicago.csl
+echo: true
+eval: false
+messages: false
+error: false
+warning: false
+nocite: '@*'
+page-layout: article
+title-block-banner: true
+---
+If you are interested in developing an article or other piece of content for Real World Data Science, filling in this content brief template is an important first step in the process.
+
+Content briefs are an opportunity for contributors and editors to work together to evolve, refine, and agree ideas *before* a first draft is developed. This early work is valuable as it can reduce the amount of time spent on revisions and edits *after* a first draft is submitted and reviewed.
+
+You are welcome to write and submit your content brief in whatever document format you like, using the section headings below to explain your idea. 
+
+If you'd like to use this styled `Quarto` document template to the fullest, however, follow the notes under the first few headings and then fill in the remainder of the document. You can then render and submit the document as an html, Word, or PDF file.
+
+## Title of submission
+Delete the heading above, and add your proposed title to the `title:` section of the document `YAML`, e.g.:
+
+```{yaml}
+title: My Real World Data Science article idea
+```
+
+## Author name(s) and affiliation(s)
+Delete the heading above, and add author names and affiliations to the `author:` section of the document `YAML`, e.g.:
+
+```{yaml}
+author: FirstName LastName, Affiliation
+```
+
+## Theme/topic area
+Delete the heading above, and add theme/topic keywords to the `categories:` section of the document `YAML`, e.g.:
+
+```{yaml}
+categories:
+  - Content ideas
+  - Explained
+  - In detail
+```
+
+## Target audience
+
+## Synopsis or sell line, summarising the story and its importance/value (250 words max.)
+You might also consider adding a short synopsis to the `description:` section of the document `YAML`, e.g.:
+
+```{yaml}
+description: |
+  This is the place to really sell your idea in just a couple of sentences.
+```
+
+## Key audience takeaways
+
+## Formats and features (e.g., text, audio, video; code blocks, interactive data visualisations, etc.)
+
+## Accessibility considerations
+
+## Target length/word count
+
+## First draft to be submitted by…
+
+::: {.callout-note appearance="simple"}
+**Ready to submit your content brief?** Send it to Real World Data Science editor [Brian Tarran](https://realworlddatascience.net/contact.html)
+:::
