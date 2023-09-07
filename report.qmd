@@ -28,7 +28,9 @@ messages: false
 error: false
 warning: false
 nocite: '@*'
-citation: true
+page-layout: article
+title-block-banner: true
+# citation: true
 ---
 
 <!-- TODO: How to integrate this template with the submission process? -->
