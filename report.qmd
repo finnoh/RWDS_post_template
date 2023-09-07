@@ -33,7 +33,7 @@ citation: true
 
 <!-- TODO: How to integrate this template with the submission process? -->
 
-This is a template for writing RWDS articles in [`Quarto`](https://quarto.org). Please insert graphs and tables as static objects, i.e. `.png` files or markdown tables, rather than generating them by code, as it otherwise takes too long to render the full RWDS website.
+This is a template for writing Real World Data Science (RWDS) articles in [`Quarto`](https://quarto.org). Please insert graphs and tables as static objects, i.e. `.png` files or markdown tables, rather than generating them by code, as it otherwise takes too long to render the full RWDS website.
 
 One idea for a workflow could be to write your analysis and text directly in the `report.qmd` file, execute your code cells in your local terminal, save figures into the images folder, and import them as files in the `report.qmd`.
 
@@ -45,9 +45,9 @@ For the content of your writing, make sure to check out the resources on [RWDS--
 
 Notice how the headings and their hierarchy also show up in the table of contents on the right-hand side.
 
-Very good writing also comes in **bold**, *italics*, and ~~strikethrough~~.
+When writing, use **bold**, *italics*, and ~~strikethrough~~ text for emphasis, but use sparingly.
 
-<!-- You can also write comments for yourself, which won't show up in the rendered documents. However, be aware that these comments will be displayed in the online source code in the RWDS repository, so don't tell any secrets here. -->
+<!-- You can also write comments for yourself, which won't show up in the rendered documents. However, be aware that these comments will be displayed in the online source code in the RWDS repository, so don't share any secrets here! -->
 
 In this subsection, we will show how to create lists and blockquotes:
 
@@ -58,9 +58,9 @@ In this subsection, we will show how to create lists and blockquotes:
 - Item B
   - Subitem B1
 
-> You can make profound statements in a blockquote
+> You can make profound statements in a blockquote.
 
-You can add a footnote to your writing^[in case you want to give an extra reference or link to a source]
+You can add a footnote to your writing.^[In case you want to give an extra reference or link to a source.]
 
 By adding your references as BibTeX to the `references.bib` file in this repository, you not only maintain your references in the right citation style, but you can also cite directly, as recommended by @example-bibtexkey, or indirectly [see @example-bibtexkey].
 
@@ -68,32 +68,32 @@ By writing `---`, you can add a vertical line.
 
 ---
 
-If your tutorial includes tips on special keyboard shortcuts, you can typeset them like this: *To print, press* {{< kbd Shift-Ctrl-P >}}. *To open an existing new project, press* {{< kbd mac=Shift-Command-O win=Shift-Control-O linux=Shift-Ctrl-L >}}.
+If your article includes tips on special keyboard shortcuts, you can typeset them like this: *To print, press* {{< kbd Shift-Ctrl-P >}}. *To open an existing new project, press* {{< kbd mac=Shift-Command-O win=Shift-Control-O linux=Shift-Ctrl-L >}}.
 
-You can write equations in-line like this $y = \beta_0 + \beta_1 x_1 + \beta_2 x_2 + \epsilon \text{, }$ or in a separate block like this
+You can write equations in-line like this $y = \beta_0 + \beta_1 x_1 + \beta_2 x_2 + \epsilon \text{, }$ or in a separate block like this:
 $$
 y = \beta_0 + \beta_1 x_1 + \beta_2 x_2 + \epsilon \text{. }
 $$ {#eq-first}
 
 @eq-first is an example of a reference to an equation.
 
-::: {.callout-note style="margin-top: 2.25rem;" appearance="simple"}
+::: {.callout-note appearance="simple"}
 For more information on **cross-references**, see the [Quarto documentation](https://quarto.org/docs/authoring/cross-references.html#equations).
 :::
 
 ### Sub-section: Creating tables
 
-Adding a table in markdown is easy, but can result in some formatting work. Consider using a tool like [tablesgenerator](https://www.tablesgenerator.com/markdown_tables), or the [Visual Editor if you are using R Studio](https://quarto.org/docs/visual-editor/):
+Adding a table in markdown is easy, but can result in some formatting work. Consider using a tool like [tablesgenerator](https://www.tablesgenerator.com/markdown_tables), or the [Visual Editor if you are using R Studio](https://quarto.org/docs/visual-editor/).
 
 | Column 1 | Column 2 | Column 3 |
 | -------- | -------- | -------- |
 | A        | B        | C        |
 | D        | E        | F        |
-: Example table with a caption {#tbl-example}
+: Example table with a caption. {#tbl-example}
 
 You can also reference great tables such as @tbl-example.
 
-If needed, you can also add subtables:
+If needed, you can also add sub-tables:
 
 ::: {#tbl-panel layout-ncol=2}
 | Col1 | Col2 | Col3 |
@@ -102,7 +102,7 @@ If needed, you can also add subtables:
 | E    | F    | G    |
 | A    | G    | G    |
 
-: First Table {#tbl-first}
+: First Table. {#tbl-first}
 
 | Col1 | Col2 | Col3 |
 |------|------|------|
@@ -110,14 +110,14 @@ If needed, you can also add subtables:
 | E    | F    | G    |
 | A    | G    | G    |
 
-: Second Table {#tbl-second}
+: Second Table. {#tbl-second}
 
-Main Caption
+Main Caption.
 :::
 
 See @tbl-panel for details, especially @tbl-second.
 
-::: {.callout-note style="margin-top: 2.25rem;" appearance="simple"}
+::: {.callout-note appearance="simple"}
 For more information on **tables**, see the [Quarto documentation](https://quarto.org/docs/authoring/tables.html#grid-tables).
 :::
 
@@ -163,7 +163,7 @@ y <- x^2
 plot(x, y)
 ```
 
-If you want to reference specific lines of code set `code-line-numbers: true`. Even better: Take a look at how to do [interactive code annotations](https://quarto.org/docs/authoring/code-annotation.html#annotation-syntax), as these are also supported on Real World Data Science. You can see an example here (try clicking on the numbers for the highlighting):
+If you want to reference specific lines of code set `code-line-numbers: true`. Even better, take a look at how to do [interactive code annotations](https://quarto.org/docs/authoring/code-annotation.html#annotation-syntax), as these are also supported on Real World Data Science. You can see an example here (try clicking on the numbers for the highlighting):
 
 ```{r}
 #| code-line-numbers: true
@@ -185,9 +185,13 @@ You can also add images:
 
 ![](https://realworlddatascience.net/images/rwds-logo-150px.png)
 
-and resize them
+and resize them:
 
 ![](https://realworlddatascience.net/images/rwds-logo-150px.png){width=10%}
+
+and reposition them:
+
+![](https://realworlddatascience.net/images/rwds-logo-150px.png){width=10% fig-align="center"}
 
 You can make use of Quarto's options to arrange multiple images in a grid, and link to both URLs and local files. Also, you can add captions to images that contain links. Local images should be stored in the folder `images` and in `.png` format.
 
@@ -199,7 +203,7 @@ You can also cross-reference figures, such as @fig-layout, or subfigures like @f
 
 ![[Laptop](https://images.unsplash.com/photo-1538688273852-e29027c0c176?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80)](https://images.unsplash.com/photo-1538688273852-e29027c0c176?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80){#fig-laptop}
 
-![[Cover of The Repo Newsletter](https://dsecon.substack.com)](/images/repo_cover.png){#fig-repo}
+![[Cover of The Repo Newsletter](https://dsecon.substack.com)](images/repo_cover.png){#fig-repo}
 
 Caption for the full figure
 
@@ -208,16 +212,16 @@ Caption for the full figure
 Sometimes, you might want to add an image, graph, equation, table, or simple text in the margin of the page, to further substantiate a claim that you make. Here we put the RWDS logo in the margin.
 
 ::: {.column-margin}
-![RWDS Logo in the maring](https://realworlddatascience.net/images/rwds-logo-150px.png)
+![RWDS logo in the margin.](https://realworlddatascience.net/images/rwds-logo-150px.png)
 :::
 
-::: {.callout-note style="margin-top: 2.25rem;" appearance="simple"}
+::: {.callout-note appearance="simple"}
 For more information on figures, see the [Quarto documentation](https://quarto.org/docs/authoring/figures.html).
 :::
 
 ## Creating diagrams
 
-Rather than creating diagrams in Canva, Figma, or PowerPoint and pasting them into your article as an image, consider using [Mermaid](https://mermaid-js.github.io/mermaid/#/). Note how the chunk options fore Mermaid start with `%%|` and that you need to set the option `eval: true` and `echo: false` to only generate your graph and not the code that created it. @fig-mermaid is an example of a reference to a diagram.
+Rather than creating diagrams in Canva, Figma, or PowerPoint and pasting them into your article as an image, consider using [Mermaid](https://mermaid-js.github.io/mermaid/#/). Note how the chunk options for Mermaid start with `%%|` and that you need to set the option `eval: true` and `echo: false` to only generate your graph and not the code that created it. @fig-mermaid is an example of a reference to a diagram.
 
 ```{mermaid}
 %%| eval: true
@@ -230,17 +234,19 @@ flowchart LR
   B --> C{Decision}
   C --> D[Result one]
   C --> E[Result two]
+linkStyle default stroke:black
 ```
 
-::: {.callout-note style="margin-top: 2.25rem;" appearance="simple"}
+::: {.callout-note appearance="simple"}
 For more information on diagrams, see the [Quarto documentation](https://quarto.org/docs/authoring/diagrams.html).
 :::
 
 ## Interactive elements such as Shiny
 
-We welcome interactive elements such as Shiny apps. So far, the easiest way to implement these apps is to host them on your own and embed them in this article as an HTML iframe object.
+We welcome the inclusion of interactive elements such as Shiny apps in RWDS articles. So far, the easiest way to implement these apps is to host them on your own and embed them in this article as an HTML iframe object.
 
 One example workflow could be:
+
 1. Create a Shiny app and host it on your server, e.g. on [shinyapps.io](https://www.shinyapps.io/) (free option).
 2. You can then embed the app in your article as an [HTML iframe](https://support.posit.co/hc/en-us/articles/217592607-Can-I-embed-iframe-Shiny-apps-in-other-websites-from-RStudio-Connect-)
 
@@ -252,7 +258,7 @@ The iframe could look like this (replace `www.your_shiny_dashboard` with the URL
 
 Paste this code directly into your `.qmd` file to implement the HTML iframe.
 
-You can find an example in [*Using 'Basket Complementarity' to make Product Recommendations on RWDS*](https://realworlddatascience.net/ideas/datasciencebites/posts/2023/03/02/basket-complementarity.html).
+You can find an example in the RWDS article, [Using 'basket complementarity' to make product recommendations](https://realworlddatascience.net/ideas/datasciencebites/posts/2023/03/02/basket-complementarity.html).
 
 ## Some icing on the cake
 
@@ -262,7 +268,7 @@ You can add a warning to your writing like this:
 This is a warning!
 :::
 
-If your remark is too benign for a warning, but still valuable information for the reader, consider a note
+If your remark is too benign for a warning, but still valuable information for the reader, consider a note:
 
 ::: {.callout-note style="margin-top: 2.25rem;" appearance="simple"}
 Want to hear more from the RSS Data Science and AI Section? Sign up for its newsletter at [rssdsaisection.substack.com](https://rssdsaisection.substack.com/).
@@ -275,15 +281,6 @@ To add more media to your article, consider embedding a video:
 <!-- TODO: This leads to weird formatting of the rest of the article. Also: How does this work when hosted? -->
 
 <!-- https://quarto.org/docs/interactive/shiny/ -->
-
-
-## References
-::: {#refs}
-
-:::
-
-
-``` {r}
 
 ::: {.article-btn}
 [Back to section homepage](url)
@@ -309,5 +306,3 @@ How to cite
 :::
 :::
 :::
-
-<!--- TODO: Add the comment section here. --->
