@@ -64,18 +64,9 @@ You can add a footnote to your writing.^[In case you want to give an extra refer
 
 By adding your references as BibTeX to the `references.bib` file in this repository, you not only maintain your references in the right citation style, but you can also cite directly, as recommended by @example-bibtexkey, or indirectly [see @example-bibtexkey].
 
-By writing... 
+By writing `---` you can add a vertical line separator.
 
-``` {markdown}
-::: keyline
 ---
-:::
-```
-... you can add a vertical line separator.
-
-::: keyline
----
-:::
 
 If your article includes tips on special keyboard shortcuts, you can typeset them like this: *To print, press* {{< kbd Shift-Ctrl-P >}}. *To open an existing new project, press* {{< kbd mac=Shift-Command-O win=Shift-Control-O linux=Shift-Ctrl-L >}}.
 

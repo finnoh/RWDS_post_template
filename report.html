@@ -91,6 +91,9 @@ div.csl-indent {
 <link href="report_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script src="report_files/libs/quarto-contrib/kbd/kbd.js"></script>
 <link href="report_files/libs/quarto-contrib/kbd/kbd.css" rel="stylesheet">
+<script src="report_files/libs/quarto-diagram/mermaid.min.js"></script>
+<script src="report_files/libs/quarto-diagram/mermaid-init.js"></script>
+<link href="report_files/libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -187,17 +190,9 @@ div.csl-indent {
 </blockquote>
 <p>You can add a footnote to your writing.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
 <p>By adding your references as BibTeX to the <code>references.bib</code> file in this repository, you not only maintain your references in the right citation style, but you can also cite directly, as recommended by <span class="citation" data-cites="example-bibtexkey">Doe (<a href="#ref-example-bibtexkey" role="doc-biblioref">2020</a>)</span>, or indirectly <span class="citation" data-cites="example-bibtexkey">(see <a href="#ref-example-bibtexkey" role="doc-biblioref">Doe 2020</a>)</span>.</p>
-<p>By writing…</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>::: keyline</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>---</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>… you can add a vertical line separator.</p>
-<div class="keyline">
+<p>By writing <code>---</code> you can add a vertical line separator.</p>
 <hr>
-</div>
-<p>If your article includes tips on special keyboard shortcuts, you can typeset them like this: <em>To print, press</em> <kbd>Shift-Ctrl-P</kbd>. <em>To open an existing new project, press</em> <kbd data-mac="Shift-Command-O" data-linux="Shift-Ctrl-L" data-windows="Shift-Control-O"></kbd>.</p>
+<p>If your article includes tips on special keyboard shortcuts, you can typeset them like this: <em>To print, press</em> <kbd>Shift-Ctrl-P</kbd>. <em>To open an existing new project, press</em> <kbd data-linux="Shift-Ctrl-L" data-windows="Shift-Control-O" data-mac="Shift-Command-O"></kbd>.</p>
 <p>You can write equations in-line like this <span class="math inline">\(y = \beta_0 + \beta_1 x_1 + \beta_2 x_2 + \epsilon \text{, }\)</span> or in a separate block like this: <span id="eq-first"><span class="math display">\[
 y = \beta_0 + \beta_1 x_1 + \beta_2 x_2 + \epsilon \text{. }
 \tag{1}\]</span></span></p>
@@ -323,54 +318,54 @@ y = \beta_0 + \beta_1 x_1 + \beta_2 x_2 + \epsilon \text{. }
 <h2 class="anchored" data-anchor-id="another-main-section-writing-code">Another main section: Writing code</h2>
 <p>Authoring technical articles may also include code chunks. You can add code chunks in <code>R</code> like this:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set_signif_par</span>()</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>, <span class="at">col=</span><span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>, <span class="at">pch=</span><span class="dv">19</span>, <span class="at">cex=</span><span class="dv">3</span>, <span class="at">xlab=</span><span class="st">""</span>, <span class="at">ylab=</span><span class="st">""</span>,</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>     <span class="at">main =</span> <span class="st">"My Significance Plot"</span>,</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>     <span class="at">sub =</span> <span class="st">"Source: data source"</span>)</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">h=</span><span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>, <span class="at">v=</span><span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>, <span class="at">col =</span> <span class="st">"lightgrey"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set_signif_par</span>()</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>, <span class="at">col=</span><span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>, <span class="at">pch=</span><span class="dv">19</span>, <span class="at">cex=</span><span class="dv">3</span>, <span class="at">xlab=</span><span class="st">""</span>, <span class="at">ylab=</span><span class="st">""</span>,</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>     <span class="at">main =</span> <span class="st">"My Significance Plot"</span>,</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>     <span class="at">sub =</span> <span class="st">"Source: data source"</span>)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">h=</span><span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>, <span class="at">v=</span><span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>, <span class="at">col =</span> <span class="st">"lightgrey"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>We can write not only about <code>R</code>, but also about <code>Python</code>:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Hello this is Python code"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Hello this is Python code"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>or <code>Julia</code> (and many other languages):<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{julia}</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>using Plots</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>plot(<span class="fu">sin</span>, </span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>     x-&gt;<span class="fu">sin</span>(<span class="dv">2</span>x), </span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>     <span class="dv">0</span>, </span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>     <span class="dv">2</span>π, </span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>     leg=false, </span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>     fill=(<span class="dv">0</span>,:lavender))</span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{julia}</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>using Plots</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>plot(<span class="fu">sin</span>, </span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>     x-&gt;<span class="fu">sin</span>(<span class="dv">2</span>x), </span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>     <span class="dv">0</span>, </span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>     <span class="dv">2</span>π, </span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>     leg=false, </span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>     fill=(<span class="dv">0</span>,:lavender))</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>If you want to show how to write a specific code chunk in <code>Quarto</code>, you can use the <code>echo: fenced</code> option to show the code in the output.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="co"># This is a fenced code block with some R code</span></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> x<span class="sc">^</span><span class="dv">2</span></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(x, y)</span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="co"># This is a fenced code block with some R code</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> x<span class="sc">^</span><span class="dv">2</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(x, y)</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>If you want to reference specific lines of code, set <code>code-line-numbers: true</code>. Even better, take a look at how to do <a href="https://quarto.org/docs/authoring/code-annotation.html#annotation-syntax">interactive code annotations</a>, as these are also supported on Real World Data Science. You can see an example here (try clicking on the numbers for the highlighting):</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="annotated-cell-6"><pre class="sourceCode numberSource r code-annotation-code number-lines code-with-copy code-annotated"><code class="sourceCode r"><span id="annotated-cell-6-1"><a href="#annotated-cell-6-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="annotated-cell-6-2"><a href="#annotated-cell-6-2"></a><span class="fu">library</span>(palmerpenguins)</span>
-<a class="code-annotation-anchor" data-target-cell="annotated-cell-6" data-target-annotation="1" onclick="event.preventDefault();" href="">1</a><span id="annotated-cell-6-3" class="code-annotation-target"><a href="#annotated-cell-6-3"></a>penguins <span class="sc">|&gt;</span></span>
-<a class="code-annotation-anchor" data-target-cell="annotated-cell-6" data-target-annotation="2" onclick="event.preventDefault();" href="">2</a><span id="annotated-cell-6-4" class="code-annotation-target"><a href="#annotated-cell-6-4"></a>  <span class="fu">mutate</span>(</span>
-<span id="annotated-cell-6-5"><a href="#annotated-cell-6-5"></a>    <span class="at">bill_ratio =</span> bill_depth_mm <span class="sc">/</span> bill_length_mm,</span>
-<span id="annotated-cell-6-6"><a href="#annotated-cell-6-6"></a>    <span class="at">bill_area  =</span> bill_depth_mm <span class="sc">*</span> bill_length_mm</span>
-<span id="annotated-cell-6-7"><a href="#annotated-cell-6-7"></a>  )</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="annotated-cell-5"><pre class="sourceCode numberSource r code-annotation-code number-lines code-with-copy code-annotated"><code class="sourceCode r"><span id="annotated-cell-5-1"><a href="#annotated-cell-5-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="annotated-cell-5-2"><a href="#annotated-cell-5-2"></a><span class="fu">library</span>(palmerpenguins)</span>
+<a class="code-annotation-anchor" data-target-cell="annotated-cell-5" data-target-annotation="1" onclick="event.preventDefault();" href="">1</a><span id="annotated-cell-5-3" class="code-annotation-target"><a href="#annotated-cell-5-3"></a>penguins <span class="sc">|&gt;</span></span>
+<a class="code-annotation-anchor" data-target-cell="annotated-cell-5" data-target-annotation="2" onclick="event.preventDefault();" href="">2</a><span id="annotated-cell-5-4" class="code-annotation-target"><a href="#annotated-cell-5-4"></a>  <span class="fu">mutate</span>(</span>
+<span id="annotated-cell-5-5"><a href="#annotated-cell-5-5"></a>    <span class="at">bill_ratio =</span> bill_depth_mm <span class="sc">/</span> bill_length_mm,</span>
+<span id="annotated-cell-5-6"><a href="#annotated-cell-5-6"></a>    <span class="at">bill_area  =</span> bill_depth_mm <span class="sc">*</span> bill_length_mm</span>
+<span id="annotated-cell-5-7"><a href="#annotated-cell-5-7"></a>  )</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-annotation">
 <dl class="code-annotation-container-grid">
-<dt data-target-cell="annotated-cell-6" data-target-annotation="1">1</dt>
+<dt data-target-cell="annotated-cell-5" data-target-annotation="1">1</dt>
 <dd>
-<span data-code-cell="annotated-cell-6" data-code-annotation="1" data-code-lines="3">Take <code>penguins</code>, and then,</span>
+<span data-code-cell="annotated-cell-5" data-code-lines="3" data-code-annotation="1">Take <code>penguins</code>, and then,</span>
 </dd>
-<dt data-target-cell="annotated-cell-6" data-target-annotation="2">2</dt>
+<dt data-target-cell="annotated-cell-5" data-target-annotation="2">2</dt>
 <dd>
-<span data-code-cell="annotated-cell-6" data-code-annotation="2" data-code-lines="4,5,6,7">add new columns for the bill ratio and bill area.</span>
+<span data-code-cell="annotated-cell-5" data-code-lines="4,5,6,7" data-code-annotation="2">add new columns for the bill ratio and bill area.</span>
 </dd>
 </dl>
 </div>
@@ -443,17 +438,24 @@ y = \beta_0 + \beta_1 x_1 + \beta_2 x_2 + \epsilon \text{. }
 </section>
 <section id="creating-diagrams" class="level2">
 <h2 class="anchored" data-anchor-id="creating-diagrams">Creating diagrams</h2>
-<p>Rather than creating diagrams in Canva, Figma, or PowerPoint and pasting them into your article as an image, consider using <a href="https://mermaid-js.github.io/mermaid/#/">Mermaid</a>. Note how the chunk options for Mermaid start with <code>%%|</code> and that you need to set the option <code>eval: true</code> and <code>echo: false</code> to only generate your graph and not the code that created it. <strong>?@fig-mermaid</strong> is an example of a reference to a diagram.</p>
-<pre class="{mermaid}"><code>%%| eval: true
-%%| echo: false
-%%| fig-align: center
-%%| fig-cap: "This is a caption for the diagram."
-%%| label: fig-mermaid
-flowchart LR
+<p>Rather than creating diagrams in Canva, Figma, or PowerPoint and pasting them into your article as an image, consider using <a href="https://mermaid-js.github.io/mermaid/#/">Mermaid</a>. Note how the chunk options for Mermaid start with <code>%%|</code> and that you need to set the option <code>eval: true</code> and <code>echo: false</code> to only generate your graph and not the code that created it. <a href="#fig-mermaid">Figure&nbsp;2</a> is an example of a reference to a diagram.</p>
+<div class="cell" data-eval="true" data-layout-align="center">
+<div class="cell-output-display">
+<div id="fig-mermaid" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<div>
+<pre class="mermaid mermaid-js" data-label="fig-mermaid">flowchart LR
   A[Hard edge] --&gt; B(Round edge)
   B --&gt; C{Decision}
   C --&gt; D[Result one]
-  C --&gt; E[Result two]</code></pre>
+  C --&gt; E[Result two]
+</pre>
+</div>
+<figcaption class="figure-caption">Figure&nbsp;2: This is a caption for the diagram.</figcaption>
+</figure>
+</div>
+</div>
+</div>
 <div class="callout callout-style-simple callout-note">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -475,7 +477,7 @@ flowchart LR
 </ol>
 <p>The iframe could look like this (replace <code>www.your_shiny_dashboard</code> with the URL of your app):</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a> <span class="kw">&lt;iframe</span> <span class="er">src</span><span class="ot">=</span><span class="st">"www.your_shiny_dashboard"</span> <span class="er">style</span><span class="ot">=</span><span class="st">"border: none; width: 100%; height: 500px"</span> <span class="er">frameborder</span><span class="ot">=</span><span class="st">"0"</span><span class="kw">&gt;&lt;/iframe&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a> <span class="kw">&lt;iframe</span> <span class="er">src</span><span class="ot">=</span><span class="st">"www.your_shiny_dashboard"</span> <span class="er">style</span><span class="ot">=</span><span class="st">"border: none; width: 100%; height: 500px"</span> <span class="er">frameborder</span><span class="ot">=</span><span class="st">"0"</span><span class="kw">&gt;&lt;/iframe&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Paste this code directly into your <code>.qmd</code> file to implement the HTML iframe.</p>
 <p>You can find an example in the RWDS article, <a href="https://realworlddatascience.net/ideas/datasciencebites/posts/2023/03/02/basket-complementarity.html">Using ‘basket complementarity’ to make product recommendations</a>.</p>
