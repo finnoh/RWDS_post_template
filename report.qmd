@@ -64,7 +64,7 @@ You can add a footnote to your writing.^[In case you want to give an extra refer
 
 By adding your references as BibTeX to the `references.bib` file in this repository, you not only maintain your references in the right citation style, but you can also cite directly, as recommended by @example-bibtexkey, or indirectly [see @example-bibtexkey].
 
-By writing `---` you can add a vertical line separator.
+By writing `---` you can add a horizontal line separator.
 
 ---
 
