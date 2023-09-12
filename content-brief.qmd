@@ -22,12 +22,12 @@ format:
     code-annotations: below
 bibliography: references.bib
 csl: chicago.csl
-echo: true
-eval: false
-messages: false
-error: false
-warning: false
-nocite: '@*'
+execute:
+  eval: false
+  echo: true
+  messages: false
+  error: false
+  warning: false
 page-layout: article
 title-block-banner: true
 ---
@@ -42,21 +42,21 @@ If you'd like to use this styled `Quarto` document template to the fullest, howe
 ## Title of submission
 Delete the heading above, and add your proposed title to the `title:` section of the document `YAML`, e.g.:
 
-```{yaml}
+``` yaml
 title: My Real World Data Science article idea
 ```
 
 ## Author name(s) and affiliation(s)
 Delete the heading above, and add author names and affiliations to the `author:` section of the document `YAML`, e.g.:
 
-```{yaml}
+``` yaml
 author: FirstName LastName, Affiliation
 ```
 
 ## Theme/topic area
 Delete the heading above, and add theme/topic keywords to the `categories:` section of the document `YAML`, e.g.:
 
-```{yaml}
+``` yaml
 categories:
   - Content ideas
   - Explained
@@ -68,7 +68,7 @@ categories:
 ## Synopsis or sell line, summarising the story and its importance/value (250 words max.)
 You might also consider adding a short synopsis to the `description:` section of the document `YAML`, e.g.:
 
-```{yaml}
+``` yaml
 description: |
   This is the place to really sell your idea in just a couple of sentences.
 ```
@@ -84,5 +84,5 @@ description: |
 ## First draft to be submitted by…
 
 ::: {.callout-note appearance="simple"}
-**Ready to submit your content brief?** Send it to Real World Data Science editor [Brian Tarran](https://realworlddatascience.net/contact.html)
+**Ready to submit your content brief?** Send it to Real World Data Science editor [Brian Tarran](https://realworlddatascience.net/contact.html).
 :::

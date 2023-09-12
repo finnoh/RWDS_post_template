@@ -22,19 +22,17 @@ format:
     code-annotations: below
 bibliography: references.bib
 csl: chicago.csl
-echo: true
-eval: false
-messages: false
-error: false
-warning: false
+execute:
+  eval: false
+  echo: true
+  messages: false
+  error: false
+  warning: false
 nocite: '@*'
 page-layout: article
 title-block-banner: true
 # citation: true
 ---
-
-<!-- TODO: How to integrate this template with the submission process? -->
-
 This is a template for writing Real World Data Science (RWDS) articles in [`Quarto`](https://quarto.org). Please insert graphs and tables as static objects, i.e. `.png` files or markdown tables, rather than generating them by code, as it otherwise takes too long to render the full RWDS website.
 
 One idea for a workflow could be to write your analysis and text directly in the `report.qmd` file, execute your code cells in your local terminal, save figures into the images folder, and import them as files in the `report.qmd`.
@@ -66,7 +64,7 @@ You can add a footnote to your writing.^[In case you want to give an extra refer
 
 By adding your references as BibTeX to the `references.bib` file in this repository, you not only maintain your references in the right citation style, but you can also cite directly, as recommended by @example-bibtexkey, or indirectly [see @example-bibtexkey].
 
-By writing `---`, you can add a vertical line.
+By writing `---` you can add a horizontal line separator.
 
 ---
 
@@ -142,11 +140,10 @@ import pandas as pd
 print("Hello this is Python code")
 ```
 
-or `Julia` (and many other languages):
+or `Julia` (and many other languages):^[To render documents with embedded `Julia` code, follow the [installation instructions](https://quarto.org/docs/computations/julia.html#installation) on the Quarto website.]
 
-``` {julia}
+``` {{julia}}
 using Plots
-
 plot(sin, 
      x->sin(2x), 
      0, 
@@ -165,7 +162,7 @@ y <- x^2
 plot(x, y)
 ```
 
-If you want to reference specific lines of code set `code-line-numbers: true`. Even better, take a look at how to do [interactive code annotations](https://quarto.org/docs/authoring/code-annotation.html#annotation-syntax), as these are also supported on Real World Data Science. You can see an example here (try clicking on the numbers for the highlighting):
+If you want to reference specific lines of code, set `code-line-numbers: true`. Even better, take a look at how to do [interactive code annotations](https://quarto.org/docs/authoring/code-annotation.html#annotation-syntax), as these are also supported on Real World Data Science. You can see an example here (try clicking on the numbers for the highlighting):
 
 ```{r}
 #| code-line-numbers: true
@@ -207,7 +204,7 @@ You can also cross-reference figures, such as @fig-layout, or subfigures like @f
 
 ![[Cover of The Repo Newsletter](https://dsecon.substack.com)](images/repo_cover.png){#fig-repo}
 
-Caption for the full figure
+Caption for the full figure.
 
 :::
 
@@ -236,7 +233,6 @@ flowchart LR
   B --> C{Decision}
   C --> D[Result one]
   C --> E[Result two]
-linkStyle default stroke:black
 ```
 
 ::: {.callout-note appearance="simple"}
@@ -250,7 +246,7 @@ We welcome the inclusion of interactive elements such as Shiny apps in RWDS arti
 One example workflow could be:
 
 1. Create a Shiny app and host it on your server, e.g. on [shinyapps.io](https://www.shinyapps.io/) (free option).
-2. You can then embed the app in your article as an [HTML iframe](https://support.posit.co/hc/en-us/articles/217592607-Can-I-embed-iframe-Shiny-apps-in-other-websites-from-RStudio-Connect-)
+2. You can then embed the app in your article as an [HTML iframe](https://support.posit.co/hc/en-us/articles/217592607-Can-I-embed-iframe-Shiny-apps-in-other-websites-from-RStudio-Connect-).
 
 The iframe could look like this (replace `www.your_shiny_dashboard` with the URL of your app):
 
@@ -266,13 +262,13 @@ You can find an example in the RWDS article, [Using 'basket complementarity' to 
 
 You can add a warning to your writing like this:
 
-::: {.callout-warning style="margin-top: 0.75rem;" appearance="simple"}
+::: {.callout-warning appearance="simple"}
 This is a warning!
 :::
 
 If your remark is too benign for a warning, but still valuable information for the reader, consider a note:
 
-::: {.callout-note style="margin-top: 2.25rem;" appearance="simple"}
+::: {.callout-note appearance="simple"}
 Want to hear more from the RSS Data Science and AI Section? Sign up for its newsletter at [rssdsaisection.substack.com](https://rssdsaisection.substack.com/).
 :::
 
