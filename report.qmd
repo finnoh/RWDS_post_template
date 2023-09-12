@@ -262,13 +262,13 @@ You can find an example in the RWDS article, [Using 'basket complementarity' to 
 
 You can add a warning to your writing like this:
 
-::: {.callout-warning style="margin-top: 0.75rem;" appearance="simple"}
+::: {.callout-warning appearance="simple"}
 This is a warning!
 :::
 
 If your remark is too benign for a warning, but still valuable information for the reader, consider a note:
 
-::: {.callout-note style="margin-top: 2.25rem;" appearance="simple"}
+::: {.callout-note appearance="simple"}
 Want to hear more from the RSS Data Science and AI Section? Sign up for its newsletter at [rssdsaisection.substack.com](https://rssdsaisection.substack.com/).
 :::
 
