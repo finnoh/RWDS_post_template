@@ -15,4 +15,4 @@ The `references.bib` file is in BibTeX format, which is a standard format for bi
 In this folder you should store all your images and figures. In your `report.qmd` you can insert them as `![figure caption](./images/figure.png)`.
 
 
-For reference on `quarto`, see the official documentation https://quarto.org or this article https://www.ds-econ.com/quarto/ for additional information. Finn also writes [The Repo newsletter](https://dsecon.substack.com), where he curates remarkable open-source programmers and projects in data science.
+For reference on `quarto`, see the official documentation https://quarto.org. Finn also writes [The Repo newsletter](https://dsecon.substack.com), where he curates remarkable open-source programmers and projects in data science.
