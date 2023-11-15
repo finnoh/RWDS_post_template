@@ -836,7 +836,17 @@
     width: 200px;
   }
 
-  /* Mermaid */
-  :root {
-    --mermaid-edge-color: black;
+
+  /* webR */
+  .btn-webr {
+    background-color: #939bc9;
+    color: white;
+  }
+
+  pre code {
+    background-color: #f8f8f8;
+  }
+
+  pre.sourceCode {
+    background-color: #f8f8f8;
   }

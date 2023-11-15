@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Author1, Author2">
-<meta name="dcterms.date" content="2023-09-12">
+<meta name="dcterms.date" content="2023-11-15">
 <meta name="description" content="A template to help contributors style their articles and make use of different Quarto features.">
 
 <title>How to create an article for Real World Data Science</title>
@@ -91,6 +91,7 @@ div.csl-indent {
 <link href="report_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script src="report_files/libs/quarto-contrib/kbd/kbd.js"></script>
 <link href="report_files/libs/quarto-contrib/kbd/kbd.css" rel="stylesheet">
+<meta name="mermaid-theme" content="neutral">
 <script src="report_files/libs/quarto-diagram/mermaid.min.js"></script>
 <script src="report_files/libs/quarto-diagram/mermaid-init.js"></script>
 <link href="report_files/libs/quarto-diagram/mermaid.css" rel="stylesheet">
@@ -133,7 +134,7 @@ div.csl-indent {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">September 12, 2023</p>
+        <p class="date">November 15, 2023</p>
       </div>
     </div>
     
@@ -154,7 +155,11 @@ div.csl-indent {
   <li><a href="#another-main-section-writing-code" id="toc-another-main-section-writing-code" class="nav-link" data-scroll-target="#another-main-section-writing-code">Another main section: Writing code</a></li>
   <li><a href="#figures-and-their-layout" id="toc-figures-and-their-layout" class="nav-link" data-scroll-target="#figures-and-their-layout">Figures and their layout</a></li>
   <li><a href="#creating-diagrams" id="toc-creating-diagrams" class="nav-link" data-scroll-target="#creating-diagrams">Creating diagrams</a></li>
-  <li><a href="#interactive-elements-such-as-shiny" id="toc-interactive-elements-such-as-shiny" class="nav-link" data-scroll-target="#interactive-elements-such-as-shiny">Interactive elements such as Shiny</a></li>
+  <li><a href="#interactive-elements" id="toc-interactive-elements" class="nav-link" data-scroll-target="#interactive-elements">Interactive elements</a>
+  <ul class="collapse">
+  <li><a href="#shiny" id="toc-shiny" class="nav-link" data-scroll-target="#shiny">Shiny</a></li>
+  <li><a href="#webr" id="toc-webr" class="nav-link" data-scroll-target="#webr">webR</a></li>
+  </ul></li>
   <li><a href="#some-icing-on-the-cake" id="toc-some-icing-on-the-cake" class="nav-link" data-scroll-target="#some-icing-on-the-cake">Some icing on the cake</a></li>
   </ul>
 </nav>
@@ -192,7 +197,7 @@ div.csl-indent {
 <p>By adding your references as BibTeX to the <code>references.bib</code> file in this repository, you not only maintain your references in the right citation style, but you can also cite directly, as recommended by <span class="citation" data-cites="example-bibtexkey">Doe (<a href="#ref-example-bibtexkey" role="doc-biblioref">2020</a>)</span>, or indirectly <span class="citation" data-cites="example-bibtexkey">(see <a href="#ref-example-bibtexkey" role="doc-biblioref">Doe 2020</a>)</span>.</p>
 <p>By writing <code>---</code> you can add a horizontal line separator.</p>
 <hr>
-<p>If your article includes tips on special keyboard shortcuts, you can typeset them like this: <em>To print, press</em> <kbd>Shift-Ctrl-P</kbd>. <em>To open an existing new project, press</em> <kbd data-linux="Shift-Ctrl-L" data-windows="Shift-Control-O" data-mac="Shift-Command-O"></kbd>.</p>
+<p>If your article includes tips on special keyboard shortcuts, you can typeset them like this: <em>To print, press</em> <kbd>Shift-Ctrl-P</kbd>. <em>To open an existing new project, press</em> <kbd data-linux="Shift-Ctrl-L" data-mac="Shift-Command-O" data-windows="Shift-Control-O"></kbd>.</p>
 <p>You can write equations in-line like this <span class="math inline">\(y = \beta_0 + \beta_1 x_1 + \beta_2 x_2 + \epsilon \text{, }\)</span> or in a separate block like this: <span id="eq-first"><span class="math display">\[
 y = \beta_0 + \beta_1 x_1 + \beta_2 x_2 + \epsilon \text{. }
 \tag{1}\]</span></span></p>
@@ -361,11 +366,11 @@ y = \beta_0 + \beta_1 x_1 + \beta_2 x_2 + \epsilon \text{. }
 <dl class="code-annotation-container-grid">
 <dt data-target-cell="annotated-cell-5" data-target-annotation="1">1</dt>
 <dd>
-<span data-code-annotation="1" data-code-lines="3" data-code-cell="annotated-cell-5">Take <code>penguins</code>, and then,</span>
+<span data-code-lines="3" data-code-annotation="1" data-code-cell="annotated-cell-5">Take <code>penguins</code>, and then,</span>
 </dd>
 <dt data-target-cell="annotated-cell-5" data-target-annotation="2">2</dt>
 <dd>
-<span data-code-annotation="2" data-code-lines="4,5,6,7" data-code-cell="annotated-cell-5">add new columns for the bill ratio and bill area.</span>
+<span data-code-lines="4,5,6,7" data-code-annotation="2" data-code-cell="annotated-cell-5">add new columns for the bill ratio and bill area.</span>
 </dd>
 </dl>
 </div>
@@ -467,8 +472,10 @@ y = \beta_0 + \beta_1 x_1 + \beta_2 x_2 + \epsilon \text{. }
 </div>
 </div>
 </section>
-<section id="interactive-elements-such-as-shiny" class="level2">
-<h2 class="anchored" data-anchor-id="interactive-elements-such-as-shiny">Interactive elements such as Shiny</h2>
+<section id="interactive-elements" class="level2">
+<h2 class="anchored" data-anchor-id="interactive-elements">Interactive elements</h2>
+<section id="shiny" class="level3">
+<h3 class="anchored" data-anchor-id="shiny">Shiny</h3>
 <p>We welcome the inclusion of interactive elements such as Shiny apps in RWDS articles. So far, the easiest way to implement these apps is to host them on your own and embed them in this article as an HTML iframe object.</p>
 <p>One example workflow could be:</p>
 <ol type="1">
@@ -481,6 +488,12 @@ y = \beta_0 + \beta_1 x_1 + \beta_2 x_2 + \epsilon \text{. }
 </div>
 <p>Paste this code directly into your <code>.qmd</code> file to implement the HTML iframe.</p>
 <p>You can find an example in the RWDS article, <a href="https://realworlddatascience.net/ideas/datasciencebites/posts/2023/03/02/basket-complementarity.html">Using ‘basket complementarity’ to make product recommendations</a>.</p>
+</section>
+<section id="webr" class="level3">
+<h3 class="anchored" data-anchor-id="webr">webR</h3>
+<p>This webR Quarto extension, from <a href="https://thecoatlessprofessor.com/about/">James Balamuta</a>, is very exciting. As Balamuta describes, it is “designed to empower you to run R code directly in your web browser using familiar reporting tools, all without the need for an external R server.”</p>
+<p>Visit the <a href="https://quarto-webr.thecoatlessprofessor.com/">quarto-webr website</a> for details on how to make full use of this capability. And check out <a href="https://realworlddatascience.net/viewpoints/editors-blog/posts/2023/09/19/positconf-blog.html#dynamic-interactions-empowering-educators-and-researchers-with-interactive-quarto-documents-using-webr">a simple working example</a> on Real World Data Science.</p>
+</section>
 </section>
 <section id="some-icing-on-the-cake" class="level2">
 <h2 class="anchored" data-anchor-id="some-icing-on-the-cake">Some icing on the cake</h2>
