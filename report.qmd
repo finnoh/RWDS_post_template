@@ -20,6 +20,8 @@ format:
       body-width: 1000px
       margin-width: 250px
     code-annotations: below
+    mermaid: 
+      theme: neutral
 bibliography: references.bib
 csl: chicago.csl
 execute:
@@ -239,7 +241,9 @@ flowchart LR
 For more information on diagrams, see the [Quarto documentation](https://quarto.org/docs/authoring/diagrams.html).
 :::
 
-## Interactive elements such as Shiny
+## Interactive elements
+
+### Shiny
 
 We welcome the inclusion of interactive elements such as Shiny apps in RWDS articles. So far, the easiest way to implement these apps is to host them on your own and embed them in this article as an HTML iframe object.
 
@@ -257,6 +261,11 @@ The iframe could look like this (replace `www.your_shiny_dashboard` with the URL
 Paste this code directly into your `.qmd` file to implement the HTML iframe.
 
 You can find an example in the RWDS article, [Using 'basket complementarity' to make product recommendations](https://realworlddatascience.net/ideas/datasciencebites/posts/2023/03/02/basket-complementarity.html).
+
+### webR
+The webR Quarto extension, from [James Balamuta](https://thecoatlessprofessor.com/about/), is very exciting. As Balamuta describes, webR is "designed to empower you to run R code directly in your web browser using familiar reporting tools, all without the need for an external R server."
+
+Visit the [quarto-webr website](https://quarto-webr.thecoatlessprofessor.com/) for details on how to make full use of this capability. And check out [a simple working example](https://realworlddatascience.net/viewpoints/editors-blog/posts/2023/09/19/positconf-blog.html#dynamic-interactions-empowering-educators-and-researchers-with-interactive-quarto-documents-using-webr) on RWDS.
 
 ## Some icing on the cake
 
